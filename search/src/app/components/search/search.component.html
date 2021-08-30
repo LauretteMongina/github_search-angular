@@ -1,0 +1,11 @@
+
+<div class="container-fluid">
+  <h2 class="header" style="color: white">Search</h2>
+  <form  #name='ngForm'>
+      <div class="form-group">
+        <label for="name" style="color: white;">Username</label>
+        <input type="text" placeholder="Enter your username" class="form-control" id="userName" [(ngModel)]="userName" name="userName" #name.userName='ngModel' >
+      </div>
+      <button type="submit" (click)="search()" class="btn btn-sm btn-success" style="background-color: darkorange;" >Search</button>
+  </form>
+</div>
