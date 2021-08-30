@@ -1,0 +1,16 @@
+button{
+  background-color: darkorange;
+}
+.manyrepos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: white;
+}
+.describe{
+  max-height: 100px;
+}
+hr{
+  background-color:darkorange;
+  height: 1px;
+}
