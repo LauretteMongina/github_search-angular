@@ -12,7 +12,7 @@ export class UserService {
 
 
   constructor(private http: HttpClient) {
-    this.user = new User("","","","","","","","",new Date);
+    this.user = new User("","","","","",0,0,"",new Date);
     this.repo = new Repo("","","","",0,new Date)
    }
    getUsers(userName: string) {
@@ -23,25 +23,26 @@ export class UserService {
       html_url: string;
       name: string;
       avatar_url: string;
-      followers: string;
-      following: string;
+      followers: number;
+      following: number;
       repos_url: string;
       created_at: Date;
     }
     let promise = new Promise<void>((resolve, reject) => {
-      let apiURL ='https://api.github.com/users/' +userName+ '?access_token=' +environment.token;
+      let apiURL ='https://api.github.com/users/' +userName +   '?access_token=' + environment.token;
       this.http .get<ApiResponse>(apiURL) .toPromise()
-       .then((result) => {
-        this.user = result;
-    resolve();
-        },
-        (error) => {
-          reject();
-        }
-      );
+        .then((result) => {
+            this.user = result;
+resolve();
+          },
+          (error) => {
+            reject();
+          }
+        );
     });
     return promise;
   }
+
   getRepo(userName:string){
     interface ApiResponse{
       html_url: string;
@@ -52,22 +53,24 @@ export class UserService {
       created_at:Date
     }
     let promise = new Promise<void>((resolve, reject) => {
-      let apiURL ='https://api.github.com/users/' + userName +
-       '/repos?access_token=' +environment.token;
+      let apiURL =
+        'https://api.github.com/users/' +
+        userName +
+        '/repos?access_token=' +
+        environment.token;
       this.http
-       .get<ApiResponse>(apiURL)
-       .toPromise()
-       .then(
-         (result)=>{
-        this.repo = result;
-          resolve();
-        },
-        (error) => {
-          reject();
-        }
-      );
+        .get<ApiResponse>(apiURL)
+        .toPromise()
+        .then(
+          (result) => {
+            this.repo = result;
+            resolve();
+          },
+          (error) => {
+            reject();
+          }
+        );
     });
     return promise;
   }
 }
-
