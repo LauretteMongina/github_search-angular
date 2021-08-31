@@ -2,6 +2,6 @@
 export const environment = {
 
   production:true,
-  token: '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',
+  token: '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',
   
 };
