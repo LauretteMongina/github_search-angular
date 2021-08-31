@@ -1,27 +1,49 @@
-# Search
+# Github-Search
+# Author
+Laurette Mong'ina
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+### Description
+This is Agular CLI application that allows a user to enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories based on github user name.
+### Live Page 
+https://laurettemongina.github.io/github_search-angular/users
 
-## Development server
+Composed of two main components.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Search Users -search for users on git-hub based on their usernames.
+Search Repositories -search for repositories on git-hub based on their authors name.
+### BDD
+Behavior	Input	Output
+Search for a github profile	Enter the username of the github User name	Displays the name, username, number of repositories,Joining date, followers, following and lists the repos
+### Installation / Setup instruction
+Open Terminal {Ctrl+Alt+T}
 
-## Code scaffolding
+git clone https://github.com/LauretteMongina/github_search-angular.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+cd Git-Search
 
-## Build
+code . or atom . based on the text editor you have.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run ng serve for a dev server.
 
-## Running unit tests
+Navigate to http://localhost:4200/.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm install && ng serve
 
-## Running end-to-end tests
+### Technology used
+<ul>
+<li>Angular CLI</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>Bootstrap</li>
+<li>Typescript</li>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Generated with Angular CLI
 
-## Further help
+### Known Bugs
+No known bug now but pull requests are encouraged
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Contact Information
+If you have any question or contributions, please email me at [monginalaurette@gmail.com]
+### License
+MIT License:
+Copyright (c) 2021 Laurette
