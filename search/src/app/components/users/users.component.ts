@@ -11,7 +11,7 @@ import { Repo } from '../repo';
 export class UsersComponent implements OnInit {
   repo: any;
   user: any;
-  constructor(public myService: UserService) { }
+    constructor(public myService: UserService) { }
 
   getUsers(userName) {
     this.myService.getUsers(userName).then(
@@ -34,6 +34,6 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getUsers("laurettemongina")
+    this.getUsers("laurettemongina");
   }
 }
